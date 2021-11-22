@@ -5,7 +5,7 @@ const factory = require('../../utils/handlerFactory');
 
 exports.getUser = factory.getOne(User);
 exports.updateUser = catchAsync(async (req,res,next)=>{
-  const filterObj = factory.filterObject(req.body,'name','email','risk_status');
+  const filterObj = factory.filterObject(req.body,'name','email','risk_status');  
   let doc = await User.findOneAndUpdate({_id : req.user._id}, filterObj, {
     new: true,
     runValidators: true
