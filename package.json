@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/ajavieralejandro/api3dmkt/issues"
   },
-  "homepage": "https://github.com/ajavieralejandro/api3dmkt#readme"
+  "homepage": "https://github.com/ajavieralejandro/api3dmkt#readme",
+  "engines": {
+    "node": ">=10.0.0"
+  }
 }
