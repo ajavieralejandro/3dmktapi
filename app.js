@@ -23,8 +23,8 @@ const DB = process.env.DATABASE.replace(
   '<PASSWORD>',
   process.env.DATABASE_PASSWORD
 );
-
-mongoose
+try{
+  mongoose
   .connect(DB, {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -34,6 +34,12 @@ mongoose
     console.log(con);
     console.log('Database connected');
   });
+}
+catch(err){
+  console.log("Error al conectarme a la base de datos");
+  console.log(err);
+}
+
 
 app.use('/api/v1/users', userRouter);
 
